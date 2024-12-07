@@ -1,0 +1,11 @@
+{
+    "welcome": "Bienvenido",
+    "greeting": "¡Hola, {{name}}!",
+    "about": "Acerca de nosotros",
+    "services": "Nuestros servicios",
+    "contact": "Contacto",
+    "HomePage": {
+      "title": "Hola pepito"
+    }
+
+  }

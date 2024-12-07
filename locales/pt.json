@@ -1,0 +1,7 @@
+{
+    "welcome": "Bem-vindo",
+    "greeting": "Olá, {{name}}!",
+    "about": "Sobre nós",
+    "services": "Nossos serviços",
+    "contact": "Contato"
+  }
