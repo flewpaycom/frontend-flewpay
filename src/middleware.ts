@@ -8,16 +8,30 @@ const intlMiddleware = createMiddleware(routing);
 
 const authMiddleware = withAuth(
   function middleware(req) {
-    // First run the i18n middleware
+    const { pathname } = req.nextUrl;
+    if (
+      pathname.startsWith('/images') ||
+      pathname.startsWith('/assets') ||
+      pathname.includes('.')
+    ) {
+      return NextResponse.next();
+    }
+
+    // Redirect root paths without a locale
+    const isRootPath = pathname === '/';
+    if (isRootPath) {
+      const defaultLocale = "en";
+      return NextResponse.redirect(new URL(`/${defaultLocale}`, req.url));
+    }
+
     const response = intlMiddleware(req);
 
-    // Check protected routes
-    const isProtectedRoute = ['/dashboard', '/profile'].some(
-      path => req.nextUrl.pathname.includes(path)
+    const isProtectedRoute = ['/dashboard'].some(path =>
+      pathname.startsWith(path)
     );
 
     if (isProtectedRoute && !req.nextauth.token) {
-      const locale = req.nextUrl.pathname.split('/')[1] || 'en';
+      const locale = pathname.split('/')[1] || 'en';
       return NextResponse.redirect(new URL(`/${locale}/auth`, req.url));
     }
 
@@ -25,22 +39,14 @@ const authMiddleware = withAuth(
   },
   {
     callbacks: {
-      authorized: () => true // We handle authorization in the middleware function
+      authorized: () => true
     }
   }
 );
-
 export default authMiddleware;
-
 export const config = {
   matcher: [
-    // Match all pathnames except for
-    // - /api (API routes)
-    // - /_next (Next.js internals)
-    // - /_vercel (Vercel internals)
-    // - /static (public files)
-    // '/((?!api|_next|_vercel|static|favicon.ico).*)',
-    // Match all internationalized routes
+    '/((?!api|_next|_vercel|images|assets|favicon.ico|sw.js).*)',
     '/(es|en|pt)/:path*'
   ]
 };
