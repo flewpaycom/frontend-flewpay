@@ -1,10 +1,14 @@
 import SectionCuatro from '@/components/landing/SectionCuatro';
 import SectionTres from '@/components/landing/SectionTres';
+import SectionAction from '@/components/landing/SectionAction';
 import SectionFooter from '@/components/landing/SectionFooter';
+import HeaderMobile from '@/components/landing/ HeaderMobile';
+
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import SwitchLang from '@/components/SwitchLang';
+
 // Componente LanguageSelector para cambiar el idioma
 // const LanguageSelector: React.FC = () => {
 
@@ -34,8 +38,10 @@ export default function Home() {
       <SwitchLang/>
 
       {/* Secciones de la página */}
+      <HeaderMobile />
       <SectionTres />
       <SectionCuatro />
+      <SectionAction />
       <SectionFooter />
     </>
   );
