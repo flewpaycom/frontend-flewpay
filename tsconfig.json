@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+=======
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+>>>>>>> b4cd536a2fede3685b06b3dcce8db01805364508
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -22,9 +27,13 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD
       "@/*": [
         "./src/*"
       ]
+=======
+      "@/*": ["./src/*"]
+>>>>>>> b4cd536a2fede3685b06b3dcce8db01805364508
     }
   },
   "include": [

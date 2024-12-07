@@ -1,0 +1,11 @@
+{
+    "welcome": "Welcome",
+    "greeting": "Hello, {{name}}!",
+    "about": "About us",
+    "services": "Our services",
+    "contact": "Contact",
+    "HomePage": {
+      "title": "Home Page"
+  
+    }
+  }
