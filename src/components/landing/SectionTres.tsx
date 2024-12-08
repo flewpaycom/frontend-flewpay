@@ -1,54 +1,72 @@
+"use client";
 import dynamic from "next/dynamic";
+import Image from "next/image";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import { FaArrowDown } from "react-icons/fa";
+import { ReactTyped } from "react-typed";
 
 const QRCode = dynamic(() => import("react-qr-code"), { ssr: false });
 
 export default function SectionTres() {
+	useEffect(() => {
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		const AOS = require("aos");
+		AOS.init({
+			duration: 1000,
+			offset: 100,
+		});
+	}, []);
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-			<div className="w-full bg-white py-24 px-8 text-center flex flex-col items-center">
-				<h1 className="text-6xl font-extrabold leading-tight mb-8 text-black">
-					Say goodbye to{" "}
-					<span className="relative inline-block">
-						<span className="bg-[#c9d1fc] px-4 py-2 rounded-lg">Financial stress & uncertainty</span>
-					</span>
-				</h1>
-				<p className="text-gray-600 text-2xl">With our user-friendly interface anbud powerful features, you&apos;ll have all the tools you need to manage your finances with ease.</p>
-			</div>
+		<div className="min-h-screen flex flex-col items-center justify-center">
+			<article className=" max-w-screen-lg mx-auto ">
+				<div className="w-full px-6 text-center flex flex-col items-center justify-center space-y-12 py-24 min-h-screen ">
+					<div data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
+						<Image src="/flew-transparent.png" width={200} height={200} alt="FlewPay Logo" className="mx-auto" />
+					</div>
+					<h1 className="lg:text-6xl text-4xl font-extrabold leading-tight text-black">
+						Say goodbye to <br />
+						<span className="relative inline-block">
+							<ReactTyped strings={["Financial stress uncertainty", "hola mundo"]} typeSpeed={70} loop backSpeed={50} backDelay={50} className="lg:bg-primary/50 px-4 rounded-md" />
+						</span>
+					</h1>
 
-			<div className="w-full flex justify-center my-3"></div>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto my-20 px-6">
-				<div className="bg-white p-10 rounded-2xl shadow-xl flex flex-col items-center justify-center">
-					<h2 className="text-3xl font-semibold mb-6 text-black">Quick and easy</h2>
-					<p className="text-gray-600 text-center mb-8">Your journey is seamless, safe, and secure. No need to register or download apps.</p>
-					<QRCode value="https://example.com" size={220} />
-					<p className="text-sm text-gray-500 mt-6">★ </p>
+					<p className="text-gray-600 text-lg lg:text-2xl max-w-3xl">Our user-friendly interface and powerful features empower you to manage your finances effortlessly and confidently.</p>
+
+					<div data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-bottom">
+						<button title="scroll down" className="btn btn-primary rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-105 animate-bounce" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}>
+							<FaArrowDown className="text-xl" />
+						</button>
+					</div>
 				</div>
-				<div className="bg-white p-10 rounded-2xl shadow-xl flex flex-col justify-between">
+				<aside className=" overflow-hidden" data-aos="fade-up" data-aos-delay="200">
 					<div>
-						<span className="text-gray-700 block mb-4 text-lg">You send exactly</span>
-						<div className="bg-gray-50 p-6 rounded shadow-sm flex justify-between items-center mb-6">
-							<span className="font-bold text-gray-500">USD</span>
-							<input type="text" placeholder="5,000" className="text-right outline-none font-bold text-lg" />
+						<h1 className="lg:text-6xl text-4xl font-bold text-center mb-10">Dile adiós al dinero en efectivo, dile hola a FlewPay</h1>
+						<p className="text-gray-600 text-center text-2xl max-w-3xl mx-auto">Paga con QR o con tarjeta en los comercios que aceptan FlewPay. Es fácil, rápido y seguro. </p>
+					</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto my-20 px-6">
+						<div className="flex flex-col items-center text-center md:items-start md:text-left">
+							<div className="bg-white p-8 rounded-3xl shadow-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="100">
+								<h2 className="text-2xl font-semibold mb-4 text-black">Rápido y sencillo</h2>
+								<p className="text-gray-600 text-center mb-6">Tu experiencia es fluida, segura y confiable. ¡Tan simple como escanear!</p>
+								<QRCode value="https://example.com" size={220} className="mb-6" />
+								<p className="text-sm text-gray-500">★ ¡Prueba flewPay ahora!</p>
+							</div>
 						</div>
-						<span className="text-gray-900 block mb-4 text-lg">Recipient gets</span>
-						<div className="bg-gray-50 p-6 rounded shadow-sm">
-							<p className="text-right font-bold text-lg text-gray-500">221.20 EUR</p>
+
+						<div className="bg-white p-10 rounded-3xl shadow-xl flex flex-col items-center justify-between" data-aos="fade-up" data-aos-delay="200">
+							<div className="relative w-48 h-48 flex items-center justify-center mb-8">
+								<img src="/card.svg" alt="Tarjeta" className="z-10 size-full" />
+								<div className="absolute w-32 h-32 rounded-full border-4 border-indigo-600 animate-ping slow-animation"></div>
+								<div className="absolute w-24 h-24 rounded-full border-4 border-indigo-400 animate-ping slow-animation delay-150"></div>
+								<div className="absolute w-20 h-20 rounded-full border-4 border-indigo-200 animate-ping slow-animation delay-300"></div>
+							</div>
+							<h2 className="text-3xl font-semibold mb-6 text-black">Pay with card</h2>
+							<p className="text-gray-600 text-center mb-8">Pay with card in the pymes that accept FlewPay. It&apos;s easy, fast and secure.</p>
 						</div>
 					</div>
-					<ul className="text-md text-gray-800 space-y-3 my-8">
-						<li>
-							Transfer fee: <span className="float-right">12 USD</span>
-						</li>
-						<li>
-							Total amount: <span className="float-right">988 USD</span>
-						</li>
-						<li>
-							Current rate: <span className="float-right">3.67</span>
-						</li>
-					</ul>
-					<button className="bg-[#6f5bf7] text-white py-3 px-6 rounded w-full text-lg font-bold">CONTINUE</button>
-				</div>
-			</div>
+				</aside>
+			</article>
 		</div>
 	);
 }
