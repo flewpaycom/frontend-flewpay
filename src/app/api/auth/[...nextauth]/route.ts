@@ -4,7 +4,7 @@ import {
     type SIWESession,
     verifySignature,
     getChainIdFromMessage,
-    getAddressFromMessage
+    getAddressFromMessage,
 } from '@reown/appkit-siwe'
 
 declare module 'next-auth' {
@@ -15,6 +15,7 @@ declare module 'next-auth' {
 }
 
 const nextAuthSecret = process.env.NEXTAUTH_SECRET
+
 if (!nextAuthSecret) {
     throw new Error('NEXTAUTH_SECRET is not set')
 }
@@ -70,7 +71,7 @@ const handler = NextAuth({
     secret: nextAuthSecret,
     providers,
     session: {
-        strategy: 'jwt'
+        strategy: 'jwt',
     },
     callbacks: {
         session({ session, token }) {
@@ -78,7 +79,13 @@ const handler = NextAuth({
                 return session
             }
 
-            const [, chainId, address] = token.sub.split(':')
+            const parts = token.sub.split(':')
+            if (parts.length !== 2) {
+                console.error('Invalid token.sub format')
+                return session
+            }
+
+            const [chainId, address] = parts
             if (chainId && address) {
                 session.address = address
                 session.chainId = parseInt(chainId, 10)
