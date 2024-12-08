@@ -7,7 +7,7 @@ const NavbarUserDashboard = () => {
 				<img src="/flew-logo-v1.svg" alt="Logo Flewpay" className="size-8" />
 				<h2 className="text-xl">Dashboard</h2>
 			</div>
-			<div className="flex-none">
+			<div className="flex-none bg-black/70 rounded-badge ">
 				<ConnectButton />
 			</div>
 		</div>
