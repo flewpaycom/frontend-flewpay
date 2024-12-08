@@ -1,13 +1,20 @@
 "use client";
 
-import ConnectButton from "@/components/WalletButton";
+// import ConnectButton from "@/components/WalletButton";
+import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
+import { useTransitionRouter } from "next-view-transitions";
+import Image from "next/image";
 
 const Auth = () => {
+	const { open } = useAppKit();
+	const router = useTransitionRouter();
+	const { isConnected, status } = useAppKitAccount();
+
 	return (
 		<section className="relative min-h-screen bg-black">
 			{/* Imagen de fondo */}
 			<div className="absolute inset-0">
-				<img src="/images/umbrella.jpg" alt="Ethereum Welcome" className="h-full w-full object-cover" />
+				<Image src="/images/umbrella.jpg" alt="Ethereum Welcome" className="h-full w-full object-cover" fill />
 				<div className="absolute inset-0 bg-black/50"></div> {/* Overlay */}
 			</div>
 
@@ -27,7 +34,15 @@ const Auth = () => {
 
 					{/* Botón de conexión */}
 					<div className="w-full flex justify-center mb-6">
-						<ConnectButton />
+						{isConnected ? (
+							<button onClick={() => router.push("/en/dashboard/user")} className="btn btn-primary rounded-full shadow-2xl">
+								Ir al dashboard
+							</button>
+						) : (
+							<button onClick={() => open({ view: "Connect" })} className="btn btn-primary rounded-full">
+								{status === "connecting" ? "Conectando billetera..." : "Conectar billetera"}
+							</button>
+						)}
 					</div>
 				</div>
 			</div>
