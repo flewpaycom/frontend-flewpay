@@ -3,7 +3,7 @@ import CardStats from "@/components/user/dashboard/cardStats";
 import VerticalMenu from "@/components/user/dashboard/menu";
 import { useEnsName, useAccount } from "wagmi";
 
-const Dashboard = () => {
+const ListPymes = () => {
 	const { address } = useAccount();
 
 	const { data: ensName } = useEnsName({ address });
@@ -31,4 +31,4 @@ const Dashboard = () => {
 	);
 };
 
-export default Dashboard;
+export default ListPymes;

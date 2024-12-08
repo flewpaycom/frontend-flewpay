@@ -2,27 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    /* background: var(--background); */
-    font-family: Arial, Helvetica, sans-serif;
+	/* background: var(--background); */
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-body::before {
-    content: "";
-    display: block;
-    z-index: -1;
-    position: fixed;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-    background: linear-gradient(180deg, rgba(250, 249, 255, .56) 3.15%, rgba(237, 233, 255, .811) 33.62%, rgba(250, 249, 255, .39));
-}
+/* body::before {
+	content: "";
+	display: block;
+	z-index: -1;
+	position: fixed;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100vw;
+	background: url("https://cdn.dribbble.com/users/1326598/screenshots/7079518/media/28e18a0ab2218b211f5febeb08165b57.jpg?resize=1000x750&vertical=center") no-repeat center center/cover;
+} */
 
 @layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+@keyframes painting {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.animate-painting {
+	animation: painting 2s ease-in-out forwards;
 }

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
+import SwitchLang from "../SwitchLang";
 
 const HeaderMobile = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,11 +13,10 @@ const HeaderMobile = () => {
 	};
 
 	return (
-		<header className="bg-gradient-to-r from-[#c2d0fb]/50 to-[#c2dafb]/50 py-4 px-4 md:px-6 flex justify-between items-center sticky top-0 z-50 w-full rounded-b-lg backdrop-blur-md">
+		<header className="lg:bg-primary/10 bg-white py-4 px-4 md:px-6 flex justify-between items-center sticky top-0 z-50 w-full rounded-b-lg lg:backdrop-blur-md">
 			{/* Logo */}
 			<div className="flex items-center space-x-2 md:space-x-4">
-				<Image src="/logo.svg" alt="Company Logo" width={32} height={32} />
-				<span className="font-bold text-base md:text-lg text-gray-800">Flew Pay</span>
+				<Image src="/flew-transparent.png" alt="Company Logo" width={200} height={32} />
 			</div>
 
 			<nav className="hidden sm:flex flex-1 justify-center">
@@ -53,7 +53,7 @@ const HeaderMobile = () => {
 			</div>
 
 			{isMenuOpen && (
-				<div className="sm:hidden absolute top-16 left-0 w-full bg-white rounded-lg shadow-lg">
+				<div className="sm:hidden absolute top-16 left-0 w-full bg-white backdrop-blur-md rounded-b-lg">
 					<ul className="flex flex-col items-center space-y-4 py-4">
 						<li>
 							<a href="/product" className="text-gray-800">
@@ -76,7 +76,7 @@ const HeaderMobile = () => {
 							</a>
 						</li>
 						<li>
-							<Link href="/auth" className="text-[#6f5bf7] font-medium text-sm md:text-base">
+							<Link href="/auth" className="text-[#4983ff] font-medium text-sm md:text-base">
 								Iniciar Sesión
 							</Link>
 						</li>
@@ -90,10 +90,11 @@ const HeaderMobile = () => {
 			)}
 
 			<div className=" items-center hidden md:flex space-x-2 md:space-x-4">
-				<Link href="/auth" className="text-[#6f5bf7] font-medium text-sm md:text-base">
+				<SwitchLang />
+				<Link href="/auth" className=" font-medium text-sm md:text-base btn btn-outline btn-primary rounded-badge">
 					Iniciar Sesión
 				</Link>
-				<Link href="/auth" className="text-[#4983ff] font-medium text-sm md:text-base">
+				<Link href="/auth" className=" font-medium text-sm md:text-base btn btn-secondary rounded-badge">
 					Get started
 				</Link>
 			</div>
