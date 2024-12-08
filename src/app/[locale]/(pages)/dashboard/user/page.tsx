@@ -10,9 +10,9 @@ const Dashboard = () => {
 
 	return (
 		<div className="p-5">
-			<section className="rounded-3xl bg-[#fbfbfb] max-w-4xl mx-auto border-2 h-screen p-5 mt-10 relative">
+			<section className="rounded-3xl  bg-white/50 backdrop-blur-md shadow-2xl max-w-4xl mx-auto  p-5 mt-10 relative ">
 				{/* Menú Vertical */}
-				<div className="transition-all ease-in-out duration-300 fixed bottom-4 left-0 right-0 flex justify-center items-center lg:bottom-auto lg:left-[-80px] lg:top-0 lg:absolute  lg:justify-start lg:items-start ">
+				<div className="transition-all ease-in-out duration-300 fixed bottom-4 left-0 right-0 flex justify-center items-center lg:bottom-auto lg:left-[-80px] lg:top-0 lg:absolute  lg:justify-start lg:items-start z-40 ">
 					<VerticalMenu />
 				</div>
 
@@ -22,12 +22,10 @@ const Dashboard = () => {
 				</div>
 				<div className="divider"></div>
 				<h2 className="text-2xl font-bold mt-5 truncate">Bienvenido/a, {ensName ? ensName : address} 👋</h2>
-				<div className="divider">
-					<p className="text-gray-500">Account Stats</p>
-				</div>
-				<aside>
-					<CardStats />
-				</aside>
+				<div className="divider"></div>
+				{/* <aside className=""> */}
+				<CardStats />
+				{/* </aside> */}
 			</section>
 		</div>
 	);
