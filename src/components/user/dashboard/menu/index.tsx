@@ -22,7 +22,7 @@ const VerticalMenu = () => {
 	];
 
 	return (
-		<div className=" lg:top-20 lg:left-4 flex flex-row lg:flex-col  items-center bg-[#fbfbfb]/20 justify-center backdrop-blur-xl rounded-full shadow border border-gray-500/30 ">
+		<div className=" lg:top-20 lg:left-4 flex flex-row lg:flex-col  items-center bg-white/50 backdrop-blur-md shadow-2xl justify-center rounded-full  border border-gray-500/30 z-10">
 			<div className="flex-row lg:flex-col flex justify-center items-center lg:py-5 lg:px-0 px-5">
 				<button className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-purple-300 transition duration-300" title="Flewpay" aria-label="Ir al inicio">
 					<div className="w-6 h-6">
