@@ -47,6 +47,10 @@
 			"subtitle": "The payment solution that grows the business ecosystem in Latam",
 			"button": "Get Started Now",
 			"othercalltoaction": "Learn More"
+		},
+		"SectionTeam": {
+			"title": "Meet the team",
+			"subtitle": "We are a team of professionals with a passion for technology and finance"
 		}
 	}
 }

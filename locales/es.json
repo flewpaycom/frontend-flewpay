@@ -47,6 +47,10 @@
 			"subtitle": "La solución de pagos que hace crecer el ecosistema de negocios en Latam",
 			"button": "Comienza ahora",
 			"othercalltoaction": "Aprende más"
+		},
+		"SectionTeam": {
+			"title": "Conoce al equipo",
+			"subtitle": "Somos un equipo de profesionales apasionados por la tecnología y las finanzas"
 		}
 	}
 }
