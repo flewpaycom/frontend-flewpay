@@ -20,11 +20,10 @@ Flew Pay is a revolutionary payment platform that empowers small businesses and 
 ## Features
 
 -   Landing Page
--   About Us Page
--   Company Page
 -   Learn Page
 -   Web3 Integration
 -   Contracts
+-   Session with siwe and nexthaut.js
 
 ## Installation
 
