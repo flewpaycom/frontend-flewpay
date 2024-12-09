@@ -1,7 +1,52 @@
 {
-    "welcome": "Bem-vindo",
-    "greeting": "Olá, {{name}}!",
-    "about": "Sobre nós",
-    "services": "Nossos serviços",
-    "contact": "Contato"
-  }
+	"landing": {
+		"header": {
+			"name": "Flew Pay",
+			"product": "Produto",
+			"services": "Serviços",
+			"Aboutus": "Sobre nós",
+			"learn": "Aprender",
+			"login": "Entrar",
+			"register": "Começar"
+		},
+		"SectionTres": {
+			"title": "Diga adeus às finanças complexas. Olá",
+			"phrases": {
+				"phrase1": "Simplicidade",
+				"phrase2": "Confiança",
+				"phrase3": "Liberdade",
+				"phrase4": "Clareza",
+				"phrase5": "Oportunidade"
+			},
+			"description": "Pague menos por transação enquanto cria oportunidades para inovação na América Latina",
+			"titleSubsection": "Diga adeus ao dinheiro em espécie, diga olá ao FlewPay",
+			"descriptionSubsection": "Pague com QR ou cartão em estabelecimentos que aceitam FlewPay. É fácil, rápido e seguro.",
+			"subtitleQr": "Rápido e fácil",
+			"descriptionQr": "Sua experiência é fluida, segura e confiável – tão simples quanto escanear!",
+			"titleCard": "Pague com seu cartão",
+			"descriptionCard": "Pague com cartão em pequenas e médias empresas que aceitam FlewPay. É fácil, rápido e seguro."
+		},
+		"SectionCuatro": {
+			"title": "Blockchain + Finanças significa simplicidade",
+			"description": "Somos uma solução de pagamento que faz crescer o ecossistema de negócios na América Latina",
+			"iconpart1": {
+				"title": "Ecossistema",
+				"description": "Criamos um ecossistema de pagamentos para estrangeiros em estabelecimentos locais"
+			},
+			"iconpart2": {
+				"title": "Segurança",
+				"description": "Oferecemos segurança em todos os pagamentos a um preço justo"
+			},
+			"iconpart3": {
+				"title": "Rastreabilidade",
+				"description": "Promovemos a rastreabilidade de produtos de qualidade como motor de crescimento empresarial"
+			}
+		},
+		"SectionAction": {
+			"title": "Leve seu processo de pagamentos para o próximo nível",
+			"subtitle": "A solução de pagamentos que faz crescer o ecossistema de negócios na América Latina",
+			"button": "Comece agora",
+			"othercalltoaction": "Saiba mais"
+		}
+	}
+}
