@@ -4,8 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 import SwitchLang from "../SwitchLang";
+import { useTranslations } from "next-intl";
 
 const HeaderMobile = () => {
+	// translations
+	const t = useTranslations("landing.header");
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -23,22 +27,22 @@ const HeaderMobile = () => {
 				<ul className="flex space-x-4 md:space-x-6">
 					<li>
 						<a href="/product" className="text-gray-800">
-							Product
+							{t("product")}
 						</a>
 					</li>
 					<li>
 						<a href="/services" className="text-gray-800">
-							Services
+							{t("services")}
 						</a>
 					</li>
 					<li>
 						<a href="/Aboutus" className="text-gray-800">
-							About us
+							{t("Aboutus")}
 						</a>
 					</li>
 					<li>
 						<a href="/learn" className="text-gray-800">
-							Learn
+							{t("learn")}
 						</a>
 					</li>
 				</ul>
@@ -57,32 +61,32 @@ const HeaderMobile = () => {
 					<ul className="flex flex-col items-center space-y-4 py-4">
 						<li>
 							<a href="/product" className="text-gray-800">
-								Product
+								{t("product")}
 							</a>
 						</li>
 						<li>
 							<a href="/services" className="text-gray-800">
-								Services
+								{t("services")}
 							</a>
 						</li>
 						<li>
 							<a href="/Aboutus" className="text-gray-800">
-								About us
+								{t("Aboutus")}
 							</a>
 						</li>
 						<li>
 							<a href="/learn" className="text-gray-800">
-								Learn
+								{t("learn")}
 							</a>
 						</li>
 						<li>
 							<Link href="/auth" className="text-[#4983ff] font-medium text-sm md:text-base">
-								Iniciar Sesión
+								{t("login")}
 							</Link>
 						</li>
 						<li>
 							<Link href="/auth" className="text-[#4983ff] font-medium text-sm md:text-base">
-								Get started
+								{t("register")}
 							</Link>
 						</li>
 					</ul>
@@ -92,10 +96,10 @@ const HeaderMobile = () => {
 			<div className=" items-center hidden md:flex space-x-2 md:space-x-4">
 				<SwitchLang />
 				<Link href="/auth" className=" font-medium text-sm md:text-base btn btn-outline btn-primary rounded-badge">
-					Iniciar Sesión
+					{t("login")}
 				</Link>
 				<Link href="/auth" className=" font-medium text-sm md:text-base btn btn-secondary rounded-badge">
-					Get started
+					{t("register")}
 				</Link>
 			</div>
 		</header>

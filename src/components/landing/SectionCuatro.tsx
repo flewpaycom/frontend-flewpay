@@ -1,26 +1,29 @@
 "use client";
+import { useTranslations } from "next-intl";
 import React from "react";
-import { FaExchangeAlt, FaUnlock, FaBuilding } from "react-icons/fa";
-
-const features = [
-	{
-		icon: <FaExchangeAlt className="text-5xl group-hover:scale-110 transition-transform" />,
-		title: "Free transfers",
-		description: "Create a financial experience and automate repeat purchases by scheduling recurring payments.",
-	},
-	{
-		icon: <FaBuilding className="text-5xl group-hover:scale-110 transition-transform" />,
-		title: "Multiple accounts",
-		description: "Run your operations with cash from your account and generate yield on funds stored in your account.",
-	},
-	{
-		icon: <FaUnlock className="text-5xl group-hover:scale-110 transition-transform" />,
-		title: "Unmatched security",
-		description: "Securely manage your finances with organization-wide MFA, card-locking, and account-level controls.",
-	},
-];
+import { FaUnlock, FaTable } from "react-icons/fa";
+import { FaEarthAmericas } from "react-icons/fa6";
 
 const SectionCuatro = () => {
+	const t = useTranslations("landing.SectionCuatro");
+	const features = [
+		{
+			icon: <FaEarthAmericas className="text-5xl group-hover:scale-110 transition-transform" />,
+			title: t("iconpart1.title"),
+			description: t("iconpart1.description"),
+		},
+		{
+			icon: <FaUnlock className="text-5xl group-hover:scale-110 transition-transform" />,
+			title: t("iconpart2.title"),
+			description: t("iconpart2.description"),
+		},
+		{
+			icon: <FaTable className="text-5xl group-hover:scale-110 transition-transform" />,
+			title: t("iconpart3.title"),
+			description: t("iconpart3.description"),
+		},
+	];
+
 	return (
 		<section className="relative w-full  py-36 overflow-hidden">
 			{/* Background decoration */}
@@ -28,8 +31,8 @@ const SectionCuatro = () => {
 
 			<div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
 				<div className="text-center mb-20" data-aos="fade-up">
-					<h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-6">Experience that grows with your scale</h2>
-					<p className="text-gray-600 text-xl max-w-3xl mx-auto">Unlock the full potential of your business with our powerful features</p>
+					<h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-6">{t("title")}</h2>
+					<p className="text-gray-600 text-xl max-w-3xl mx-auto">{t("description")}</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
