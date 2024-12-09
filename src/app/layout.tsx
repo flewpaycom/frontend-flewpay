@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 	abstract: "Conectando a Latinoamérica, un pago a la vez",
 	applicationName: "Flewpay",
 	robots: "index, follow",
+	metadataBase: new URL("https://flewpay.com"),
 };
 
 export default function RootLayout({
