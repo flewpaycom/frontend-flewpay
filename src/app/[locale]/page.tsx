@@ -5,6 +5,7 @@ import SectionFooter from "@/components/landing/SectionFooter";
 import HeaderMobile from "@/components/landing/ HeaderMobile";
 
 import React from "react";
+import SectionTeam from "@/components/landing/SectionTeam";
 // import { useTranslations } from "next-intl";
 
 // Componente LanguageSelector para cambiar el idioma
@@ -32,6 +33,8 @@ export default function Home() {
 			<SectionTres />
 			<SectionCuatro />
 			<SectionAction />
+			<SectionTeam />
+
 			<SectionFooter />
 		</main>
 	);
