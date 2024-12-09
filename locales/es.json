@@ -1,11 +1,52 @@
 {
-    "welcome": "Bienvenido",
-    "greeting": "¡Hola, {{name}}!",
-    "about": "Acerca de nosotros",
-    "services": "Nuestros servicios",
-    "contact": "Contacto",
-    "HomePage": {
-      "title": "Hola pepito"
-    }
-
-  }
+	"landing": {
+		"header": {
+			"name": "Flew Pay",
+			"product": "Producto",
+			"services": "Servicios",
+			"Aboutus": "Sobre nosotros",
+			"learn": "Aprender",
+			"login": "Iniciar sesión",
+			"register": "Comenzar"
+		},
+		"SectionTres": {
+			"title": "Despídete de las finanzas complejas. Hola",
+			"phrases": {
+				"phrase1": "Simplicidad",
+				"phrase2": "Confianza",
+				"phrase3": "Libertad",
+				"phrase4": "Claridad",
+				"phrase5": "Oportunidad"
+			},
+			"description": "Paga menos por transacción mientras creas oportunidades para la innovación en Latam",
+			"titleSubsection": "Despídete del efectivo, di hola a FlewPay",
+			"descriptionSubsection": "Paga con QR o con tarjeta en comercios que aceptan FlewPay. Es fácil, rápido y seguro.",
+			"subtitleQr": "Rápido y fácil",
+			"descriptionQr": "Tu experiencia es fluida, segura y confiable, ¡tan simple como escanear!",
+			"titleCard": "Paga con tu tarjeta",
+			"descriptionCard": "Paga con tarjeta en las pymes que aceptan FlewPay. Es fácil, rápido y seguro."
+		},
+		"SectionCuatro": {
+			"title": "Blockchain + Finanzas significa simplicidad",
+			"description": "Somos una solución de pagos que hace crecer el ecosistema de negocios en Latam",
+			"iconpart1": {
+				"title": "Ecosistema",
+				"description": "Creamos un ecosistema de pagos para extranjeros en comercios locales"
+			},
+			"iconpart2": {
+				"title": "Seguridad",
+				"description": "Brindamos seguridad en todos los pagos a un precio justo"
+			},
+			"iconpart3": {
+				"title": "Trazabilidad",
+				"description": "Promovemos la trazabilidad de productos de calidad como motor de crecimiento empresarial"
+			}
+		},
+		"SectionAction": {
+			"title": "Lleva tu proceso de pagos al siguiente nivel",
+			"subtitle": "La solución de pagos que hace crecer el ecosistema de negocios en Latam",
+			"button": "Comienza ahora",
+			"othercalltoaction": "Aprende más"
+		}
+	}
+}
