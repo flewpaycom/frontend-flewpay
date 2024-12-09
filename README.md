@@ -43,4 +43,4 @@ bun dev
 
 ## Figma
 
--   ![@FigmaMockup](https://www.figma.com/design/IZgBPMcZ5wwW90RLBWL8we/flewpay?node-id=0-1&t=lmjzVwbUozR3x3i9-1)
+-   [FigmaMockup](https://www.figma.com/design/IZgBPMcZ5wwW90RLBWL8we/flewpay?node-id=0-1&t=lmjzVwbUozR3x3i9-1)
