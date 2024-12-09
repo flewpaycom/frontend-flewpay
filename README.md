@@ -23,10 +23,12 @@ Flew Pay is a revolutionary payment platform that empowers small businesses and 
 -   About Us Page
 -   Company Page
 -   Learn Page
+-   Web3 Integration
+-   Contracts
 
 ## Installation
 
-Install flew pay backend with npm
+Install flew pay frontend with npm
 
 ```bash
 npm run dev
@@ -37,3 +39,9 @@ pnpm dev
 # or
 bun dev
 ```
+
+<!-- enlace de figma -->
+
+## Figma
+
+![Logo](https://www.figma.com/design/IZgBPMcZ5wwW90RLBWL8we/flewpay?node-id=0-1&t=lmjzVwbUozR3x3i9-1)
