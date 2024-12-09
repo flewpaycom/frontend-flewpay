@@ -77,12 +77,12 @@ const SectionTeam = () => {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					{team.map((member, index) => (
-						<Tilt options={optionsTilt} className="group relative h-[520px]" data-aos="fade-up" data-aos-delay={0}>
+						<Tilt options={optionsTilt} className="group relative h-[520px]" data-aos="fade-up" data-aos-delay={0} key={index}>
 							<div key={member.name} className="group relative h-[520px]" data-aos="fade-up" data-aos-delay={index * 100}>
 								<div className="relative h-full overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
 									{/* Image Container */}
 									<div className="h-[260px] overflow-hidden">
-										<img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+										<img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" key={member.name} />
 									</div>
 
 									{/* Content */}
