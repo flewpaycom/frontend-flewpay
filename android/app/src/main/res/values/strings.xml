@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">flew-pay</string>
-    <string name="title_activity_main">flew-pay</string>
-    <string name="package_name">com.flewpay.app</string>
-    <string name="custom_url_scheme">com.flewpay.app</string>
-</resources>
