@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 body {
-	/* background: var(--background); */
-	font-family: Arial, Helvetica, sans-serif;
+    /* background: var(--background); */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: #f3f4f6 #6b4af0 !important;
+    scrollbar-width: thin !important;
 }
 
 /* body::before {
@@ -21,20 +27,21 @@ body {
 } */
 
 @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
 @keyframes painting {
-	0% {
-		width: 0%;
-	}
-	100% {
-		width: 100%;
-	}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 .animate-painting {
-	animation: painting 2s ease-in-out forwards;
+    animation: painting 2s ease-in-out forwards;
 }
