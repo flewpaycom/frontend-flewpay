@@ -1,56 +1,72 @@
 {
-	"landing": {
-		"header": {
-			"name": "Flew Pay",
-			"product": "Product",
-			"services": "Services",
-			"Aboutus": "About us",
-			"learn": "Learn",
-			"login": "Log in",
-			"register": "Get started"
-		},
-		"SectionTres": {
-			"title": "Say goodbye to complex finance. Hello",
-			"phrases": {
-				"phrase1": "Simplicity",
-				"phrase2": "Confidence",
-				"phrase3": "Freedom",
-				"phrase4": "Clarity",
-				"phrase5": "Opportunity"
-			},
-			"description": "Pay less per transaction while creating opportunities for innovation in Latam",
-			"titleSubsection": "Say goodbye to cash, say hello to FlewPay",
-			"descriptionSubsection": "Pay with QR or by card at merchants that accept FlewPay. It's easy, fast and secure.",
-			"subtitleQr": "Quick and easy",
-			"descriptionQr": "Your experience is smooth, secure and reliable - as simple as scanning!",
-			"titleCard": "Pay with your card",
-			"descriptionCard": "Pay with card in the pymes that accept FlewPay. It's easy, fast and secure."
-		},
-		"SectionCuatro": {
-			"title": "Blockchain + Finance means simplicity",
-			"description": "We are a payment solution that grows the business ecosystem in Latam",
-			"iconpart1": {
-				"title": "Ecosystem",
-				"description": "We create a payment ecosystem for foreigners at local merchants"
-			},
-			"iconpart2": {
-				"title": "Security",
-				"description": "We provide security in all payments at a fair price"
-			},
-			"iconpart3": {
-				"title": "Traceability",
-				"description": "We promote the traceability of quality products as a driver of business growth"
-			}
-		},
-		"SectionAction": {
-			"title": "Take your payments process to the next level",
-			"subtitle": "The payment solution that grows the business ecosystem in Latam",
-			"button": "Get Started Now",
-			"othercalltoaction": "Learn More"
-		},
-		"SectionTeam": {
-			"title": "Meet the team",
-			"subtitle": "We are a team of professionals with a passion for technology and finance"
-		}
-	}
+  "landing": {
+    "header": {
+      "name": "Flew Pay",
+      "product": "Product",
+      "services": "Services",
+      "Aboutus": "About us",
+      "learn": "Learn",
+      "login": "Log in",
+      "register": "Get started",
+      "contact": "Contact"
+    },
+    "SectionTres": {
+      "title": "Say goodbye to complex finance. Hello",
+      "phrases": {
+        "phrase1": "Simplicity",
+        "phrase2": "Confidence",
+        "phrase3": "Freedom",
+        "phrase4": "Clarity",
+        "phrase5": "Opportunity"
+      },
+      "description": "Pay less per transaction while creating opportunities for innovation in Latam",
+      "titleSubsection": "Say goodbye to cash, say hello to FlewPay",
+      "descriptionSubsection": "Pay with QR or by card at merchants that accept FlewPay. It's easy, fast and secure.",
+      "subtitleQr": "Quick and easy",
+      "descriptionQr": "Your experience is smooth, secure and reliable - as simple as scanning!",
+      "titleCard": "Pay with your card",
+      "descriptionCard": "Pay with card in the pymes that accept FlewPay. It's easy, fast and secure."
+    },
+    "SectionCuatro": {
+      "title": "Blockchain + Finance means simplicity",
+      "description": "We are a payment solution that grows the business ecosystem in Latam",
+      "iconpart1": {
+        "title": "Ecosystem",
+        "description": "We create a payment ecosystem for foreigners at local merchants"
+      },
+      "iconpart2": {
+        "title": "Security",
+        "description": "We provide security in all payments at a fair price"
+      },
+      "iconpart3": {
+        "title": "Traceability",
+        "description": "We promote the traceability of quality products as a driver of business growth"
+      }
+    },
+    "SectionAction": {
+      "title": "Take your payments process to the next level",
+      "subtitle": "The payment solution that grows the business ecosystem in Latam",
+      "button": "Get Started Now",
+      "othercalltoaction": "Learn More"
+    },
+    "SectionTeam": {
+      "title": "Meet the team",
+      "subtitle": "We are a team of professionals with a passion for technology and finance"
+    },
+    "SectionContactForm": {
+      "title": "Contact us",
+      "subtitle": "We are here to help you with any questions you may have",
+      "inputs": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "button": "Send"
+      },
+      "placeholders": {
+        "name": "Enter your name",
+        "email": "Enter your email",
+        "message": "Enter your message"
+      }
+    }
+  }
 }
